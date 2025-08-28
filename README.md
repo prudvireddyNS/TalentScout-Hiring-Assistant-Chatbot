@@ -24,7 +24,6 @@ TalentScout Hiring Assistant is an intelligent chatbot designed for a fictional 
 - **app.py**: Main application entry point
 - **modules/**
   - **conversation.py**: Handles conversation flow and context management
-  - **prompt_engineering.py**: Contains prompt templates and generation logic
   - **candidate_info.py**: Manages candidate information collection and validation
   - **tech_questions.py**: Generates technical questions based on tech stack
 - **utils/**

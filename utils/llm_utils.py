@@ -44,7 +44,7 @@ def get_llm_response(prompt, model=Config.DEFAULT_MODEL, temperature=Config.DEFA
 
     except Exception as e:
         print(f"Error getting LLM response: {e}")
-        return {} if response_format == "json" else "I apologize, but I'm having trouble generating a response right now."
+        return {} if response_format == "json" else Config.FALLBACK_MESSAGE
 
 def create_chat_completion(messages, model=Config.DEFAULT_MODEL, temperature=Config.DEFAULT_TEMPERATURE, max_tokens=1000):
     """Create a chat completion with a series of messages.
@@ -68,4 +68,4 @@ def create_chat_completion(messages, model=Config.DEFAULT_MODEL, temperature=Con
         return response.choices[0].message.content
     except Exception as e:
         print(f"Error creating chat completion: {e}")
-        return "I apologize, but I'm having trouble generating a response right now."
+        return Config.FALLBACK_MESSAGE
